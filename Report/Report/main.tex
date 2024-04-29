@@ -1,0 +1,57 @@
+\documentclass[english, a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+%Margins 
+\usepackage[a4paper, left=1.27cm,top=1.27cm,right =1.27cm, bottom = 1.4cm]{geometry}
+
+%Load packages
+\input{Report/Back-end/packages}
+\input{Relations/relations.tex}
+
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{Report/Relations/acronyms}
+
+
+\usepackage{authblk}
+\title{Automatically Swallowing-, coughing- and Breathing Frequency Measurements}
+\author[1]{Constantijn Coppers}
+\author[1]{Bram de Craeke}
+\author[1]{Robine Janssen}
+\author[2]{ir. Michiel Larmouseau}
+\author[1,2]{ir. Guylian Stevens}
+\author[2]{Dr. Stijn Van de Velde}
+
+\affil[1]{\small Faculty of Engineering and Architecture, Ghent University}
+\affil[2]{\small AZ Maria Middelares, Ghent}
+\def\subject{Hospital Project (E092814A)}
+\makeatletter
+
+
+
+\begin{document}
+
+%Load heading of document
+\input{Report/Lay-out/tpage}
+
+\tableofcontents
+\printnoidxglossaries
+
+
+\section{Introduction}
+Welcome to the self-made $\LaTeX$ template of Ghent University. For using abbreviations use the command: \gls{wc} or \glspl{nc}. 
+
+\subsection{More than glossary}
+\Gls{tmp}, \gls{ctmp}, ...
+
+
+\clearpage
+\printglossary[type=\acronymtype]
+\printglossary
+
+% bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{References/mybib}
+
+\end{document}
